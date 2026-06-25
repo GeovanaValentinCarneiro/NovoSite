@@ -1,0 +1,19 @@
+h1 {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.cabecalho-link { 
+  color: #fff; 
+  text-decoration: none; 
+} 
+} 
+
+.cartao {
+width: 260px;
+height: 200px;
+}
+
+.cartao-imagem {
+width: 100%;
+}

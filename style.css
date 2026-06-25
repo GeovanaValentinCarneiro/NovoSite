@@ -1,19 +1,81 @@
-h1 {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+/* Configurações Gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
 }
-.cabecalho-link { 
+
+h1 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilização do Menu/Header */
+header {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+}
+
+header nav a { 
   color: #fff; 
   text-decoration: none; 
 } 
 
+/* --- EFEITO DOS FLASHCARDS --- */
 
-.cartao {
-width: 260px;
-height: 200px;
+/* O container do cartão precisa de perspectiva para o efeito 3D funcionar */
+article {
+  perspective: 1000px;
+  display: inline-block;
+  margin: 20px;
 }
 
+/* O cartão em si, que vai girar */
+.cartao {
+  width: 260px;
+  height: 350px; /* Ajustei a altura para caber a imagem + texto */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+/* Quando passar o mouse, o cartão gira 180 graus */
+.cartao:hover {
+  transform: rotateY(180deg);
+}
+
+/* Estilo comum para a frente e o verso */
+.cartao-frente, .cartao-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Esconde o lado que estiver "atrás" */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: white;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* O verso já começa girado para ficar de costas */
+.cartao-verso {
+  transform: rotateY(180deg);
+  background-color: #e0f7fa; /* Uma cor de fundo diferente para o verso */
+}
+
+/* Estilização das imagens e textos dos cartões */
 .cartao-imagem {
-width: 100%;
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+}
+
+.cartao p {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
 }

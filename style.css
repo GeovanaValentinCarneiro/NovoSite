@@ -1,9 +1,11 @@
+/* Reset global */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Estrutura da página */
 body { 
   display: flex; 
   flex-direction: column; 
@@ -15,6 +17,7 @@ main {
   flex: 1; 
 } 
 
+/* Cabeçalho */
 .cabecalho { 
   background-color: #7e3e1c; 
   padding: 15px 25px; 
@@ -33,22 +36,37 @@ h1 {
   font-size: 24px; 
 } 
 
-section { 
+/* Secção dos Cartões */
+section.cartoes { 
   display: flex; 
   gap: 16px; 
+  padding: 20px;
 }  
 
+/* Configuração do Cartão Principal */
 .cartao {
   width: 260px;
   height: 200px;
+  perspective: 1000px; /* Adiciona profundidade ao efeito 3D */
 }
 
 .cartao-imagem {
   width: 100%;
+  height: 110px; /* Ajuste para a imagem não tapar o texto */
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
 }
 
+/* Efeito de rotação ao passar o rato (Hover) */
+.cartao:hover .cartao-interno {
+  transform: rotateY(180deg);
+}
+
+/* Estrutura Interna e Faces do Cartão */
 .cartao-interno { 
   position: relative; 
+  width: 100%;
+  height: 100%;
   transition: transform 0.8s; 
   transform-style: preserve-3d; 
 } 
@@ -56,20 +74,24 @@ section {
 .cartao-frente, 
 .cartao-verso { 
   position: absolute; 
+  width: 100%;
+  height: 100%;
   border-radius: 12px; 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-  backface-visibility: hidden; 
+  backface-visibility: hidden; /* Esconde o verso quando não está virado */
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
 } 
 
+/* Face do Verso */
 .cartao-verso { 
   transform: rotateY(180deg); 
 } 
 
+/* Rodapé */
 footer { 
   background-color: #7e3e1c; 
   padding: 15px 25px; 
   color: #fff; 
-}
-section {
-  display: flex
 }

@@ -70,3 +70,10 @@ footer{background-color: #ffa3a3;
 .cartao-vero{
     transform: rotateY(180deg);
 }
+
+section{
+    display:flex;
+    gap:16px;
+}
+
+    

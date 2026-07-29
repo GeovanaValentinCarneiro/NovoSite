@@ -24,7 +24,20 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #c5baba;
 }
 
 main{flex:1;
+}
+
+.cabecalho-link{
+    color:#fff;
+    text-decoration: none;
+}
+
+h1{
+    color:fff;
+}
+
+footer{background-color: #ffa3a3;
 }

@@ -1,50 +1,95 @@
 <!DOCTYPE html> 
 <html lang="pt-br"> 
-  <head> 
-    <meta charset="UTF-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <link rel="stylesheet" href="style.css" />
-    <title>Flashcards de Mitos e Verdades</title> 
-  </head> 
-  <body> 
-    <header class="cabecalho"> 
-  <h1>Confere Aí</h1> 
-  <nav> 
-    <a href="#" class="cabecalho-link">Início</a> 
-  </nav> 
-</header>  
-  <main> 
-  <h2>Descubra a verdade passando o mouse</h2> 
-  <section> 
-    <article class="cartao"> 
-      <div class="cartao-interno"> 
-        <div class="cartao-frente"> 
-          <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins conseguem voar como pássaros!</p> 
-        </div> 
-        <div class="cartao-verso"> 
-          <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins não voam, mas são excelentes nadadores.</p> 
-        </div> 
-      </div> 
-    </article> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Flashcards de Mitos e Verdades</title> 
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head> 
+<body> 
 
-     <article class="cartao"> 
-      <div class="cartao-interno"> 
-        <div class="cartao-frente"> 
-          <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins conseguem voar como pássaros!</p> 
+  <header class="cabecalho"> 
+    <div class="logo">
+      <span>🔍</span> Confere Aí
+    </div>
+    <nav> 
+      <a href="#" class="cabecalho-link">Início</a> 
+    </nav> 
+  </header> 
+
+  <main class="conteudo-principal"> 
+    <section class="hero">
+      <h2>Mitos & Verdades</h2>
+      <p>Passe o mouse ou toque nos cartões para revelar a resposta!</p>
+    </section>
+
+    <section class="grid-cartoes"> 
+
+      <article class="cartao"> 
+        <div class="cartao-interno"> 
+          <div class="cartao-face cartao-frente"> 
+            <span class="tag">PERGUNTA</span>
+            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
+            <div class="cartao-texto">
+              <p>Pinguins conseguem voar alto como a maioria das aves!</p> 
+            </div>
+          </div> 
+          <div class="cartao-face cartao-verso"> 
+            <div class="cartao-conteudo-verso">
+              <span class="badge">MITO! 🐧</span>
+              <p>Pinguins não voam no ar. Suas asas evoluíram para se tornarem excelentes nadadeiras debaixo d'água!</p> 
+            </div>
+          </div> 
         </div> 
-        <div class="cartao-verso"> 
-          <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins não voam, mas são excelentes nadadores.</p> 
+      </article> 
+
+      <article class="cartao"> 
+        <div class="cartao-interno"> 
+          <div class="cartao-face cartao-frente"> 
+            <span class="tag">PERGUNTA</span>
+            <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=600&q=80" alt="Peixe dourado" class="cartao-imagem"> 
+            <div class="cartao-texto">
+              <p>Peixes dourados têm apenas 3 segundos de memória!</p> 
+            </div>
+          </div> 
+          <div class="cartao-face cartao-verso"> 
+            <div class="cartao-conteudo-verso">
+              <span class="badge">MITO! 🐠</span>
+              <p>Estudos comprovam que eles lembram das coisas por meses e conseguem até reconhecer seus donos.</p> 
+            </div>
+          </div> 
         </div> 
-      </div> 
-    </article> 
-  </section> 
-</main>  
+      </article> 
+
+      <article class="cartao"> 
+        <div class="cartao-interno"> 
+          <div class="cartao-face cartao-frente"> 
+            <span class="tag">PERGUNTA</span>
+            <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=600&q=80" alt="Camaleão" class="cartao-imagem"> 
+            <div class="cartao-texto">
+              <p>Camaleões mudam de cor apenas para se camuflar no ambiente!</p> 
+            </div>
+          </div> 
+          <div class="cartao-face cartao-verso"> 
+            <div class="cartao-conteudo-verso">
+              <span class="badge">MITO! 🦎</span>
+              <p>Eles mudam de cor principalmente para regular a temperatura corporal e expressar suas emoções.</p> 
+            </div>
+          </div> 
+        </div> 
+      </article> 
+
+    </section> 
+  </main> 
+
   <footer> 
-  <p>Projeto feito por Geovana</p> 
-</footer>  
-  </body> 
-</html> 
+    <p>Projeto desenvolvido por <strong>Geovana</strong></p> 
+  </footer> 
+
+</body> 
+</html>
